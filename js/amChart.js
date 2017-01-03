@@ -13,7 +13,7 @@ var map = AmCharts.makeChart("chartdiv", {
   },
   "dataProvider": {
     "map": "worldLow",
-    "getAreasFromMap": true,
+    //"getAreasFromMap": true,
     "areas": [
      // { "id": "AU", "showAsSelected": true},
      // { "id": "US", "showAsSelected": true }
@@ -71,37 +71,6 @@ $(document).ready(function(){
     "2011": ["AR", "BR", "PY"],
     "2010": ["US", "CA"]
   }
-/*
-2010 / 2011
-2. Paraguay
-3. Argentina
-2012
-4. Iceland
-5. France
-6.  Belgium
-7. Germany
-8. Czech republic
-9. Austria
-10. Israel
-2013
-11. Norway
-12. Netherlands
-13. Poland
-14. Hungary
-15. Denmark
-16. Sweden
-17. Finland
-18. Estonia
-19. Russia
-20. Honk Kong*
-21. Vietnam
-2014
-22. Cambodia
-23. China (Beijing)
-24. Greece
-25. Italy
-26. Indonesia
-*/
     
   $("#testing").click(function(){
     //map.dataProvider.getAreasFromMap=false;
@@ -127,18 +96,16 @@ $(document).ready(function(){
     var $thisYear = yearList[$currentYear];
     if($thisYear == undefined) { return; }
     //display each year, but erase previous years
-    /*$.each($thisYear, function(index, value) {
+    $.each($thisYear, function(index, value) {
     //console.log(value);
       areas.push({
         "id": value,
         "showAsSelected": true
       });
     });
-    */
+    
     map.dataProvider.areas = areas;
     map.validateData();
-    
-
     //yearList[$currentYear].
   });
 
